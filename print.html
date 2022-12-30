@@ -97,7 +97,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction/introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="examples/introduction.html"><strong aria-hidden="true">2.</strong> Start With Examples</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="examples/quick-start.html"><strong aria-hidden="true">2.1.</strong> Quick Start</a></li><li class="chapter-item expanded "><a href="examples/rawkv.html"><strong aria-hidden="true">2.2.</strong> Interact with TiKV RawKV API</a></li><li class="chapter-item expanded "><a href="examples/txnkv.html"><strong aria-hidden="true">2.3.</strong> Interact with TiKV TxnKV API</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">2.4.</strong> TiKV RawKV Bulk Load</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.</strong> Performance</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">3.1.</strong> YCSB Benchmarks</div></li></ol></li><li class="chapter-item expanded "><a href="administration/introduction.html"><strong aria-hidden="true">4.</strong> Administration</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="administration/configuration.html"><strong aria-hidden="true">4.1.</strong> Configuration</a></li><li class="chapter-item expanded "><a href="administration/monitoring.html"><strong aria-hidden="true">4.2.</strong> Monitoring</a></li></ol></li><li class="chapter-item expanded "><a href="troubleshooting/introduction.html"><strong aria-hidden="true">5.</strong> Troubleshooting</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="troubleshooting/slow-request.html"><strong aria-hidden="true">5.1.</strong> Slow Request Diagnosis</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">5.2.</strong> Error Request Diagnosis</div></li></ol></li><li class="chapter-item expanded "><a href="architecture/introduction.html"><strong aria-hidden="true">6.</strong> Architecture and Internals</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="architecture/request-lifecycle.html"><strong aria-hidden="true">6.1.</strong> The Lifecycle of A Request</a></li><li class="chapter-item expanded "><a href="architecture/availability.html"><strong aria-hidden="true">6.2.</strong> Backoff and Retry Policy</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.3.</strong> Slow Log and Metrics</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.4.</strong> Region Cache</div></li></ol></li><li class="chapter-item expanded "><a href="contribution/introduction.html"><strong aria-hidden="true">7.</strong> Contribution Guide</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="contribution/bug-severity-guide.html"><strong aria-hidden="true">7.1.</strong> Bug Severity Guidelines</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="introduction/introduction.html"><strong aria-hidden="true">1.</strong> Introduction</a></li><li class="chapter-item expanded "><a href="production-readiness.html"><strong aria-hidden="true">2.</strong> Production Readiness</a></li><li class="chapter-item expanded "><a href="examples/introduction.html"><strong aria-hidden="true">3.</strong> Start With Examples</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="examples/quick-start.html"><strong aria-hidden="true">3.1.</strong> Quick Start</a></li><li class="chapter-item expanded "><a href="examples/rawkv.html"><strong aria-hidden="true">3.2.</strong> Interact with TiKV RawKV API</a></li><li class="chapter-item expanded "><a href="examples/txnkv.html"><strong aria-hidden="true">3.3.</strong> Interact with TiKV TxnKV API</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">3.4.</strong> TiKV RawKV Bulk Load</div></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">4.</strong> Performance</div></li><li><ol class="section"><li class="chapter-item expanded "><div><strong aria-hidden="true">4.1.</strong> YCSB Benchmarks</div></li></ol></li><li class="chapter-item expanded "><a href="administration/introduction.html"><strong aria-hidden="true">5.</strong> Administration</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="administration/configuration.html"><strong aria-hidden="true">5.1.</strong> Configuration</a></li><li class="chapter-item expanded "><a href="administration/monitoring.html"><strong aria-hidden="true">5.2.</strong> Monitoring</a></li></ol></li><li class="chapter-item expanded "><a href="troubleshooting/introduction.html"><strong aria-hidden="true">6.</strong> Troubleshooting</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="troubleshooting/slow-request.html"><strong aria-hidden="true">6.1.</strong> Slow Request Diagnosis</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">6.2.</strong> Error Request Diagnosis</div></li></ol></li><li class="chapter-item expanded "><a href="architecture/introduction.html"><strong aria-hidden="true">7.</strong> Architecture and Internals</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="architecture/request-lifecycle.html"><strong aria-hidden="true">7.1.</strong> The Lifecycle of A Request</a></li><li class="chapter-item expanded "><a href="architecture/availability.html"><strong aria-hidden="true">7.2.</strong> Backoff and Retry Policy</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.3.</strong> Slow Log and Metrics</div></li><li class="chapter-item expanded "><div><strong aria-hidden="true">7.4.</strong> Region Cache</div></li></ol></li><li class="chapter-item expanded "><a href="contribution/introduction.html"><strong aria-hidden="true">8.</strong> Contribution Guide</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="contribution/bug-severity-guide.html"><strong aria-hidden="true">8.1.</strong> Bug Severity Guidelines</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -184,6 +184,17 @@ community.</p>
 </ol>
 <p>Wish you have a good journey in developing application or contributing to the
 TiKV Java Client.</p>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="production-readiness"><a class="header" href="#production-readiness">Production Readiness</a></h1>
+<p>In general, the latest <a href="https://github.com/tikv/client-java/releases">release</a> of TiKV Java Client is ready for production use. But it is not battle-tested as full featured client for TiKV in all use cases. This page will give you more details.</p>
+<h2 id="rawkv"><a class="header" href="#rawkv">RawKV</a></h2>
+<p>All RawKV APIs are covered by <a href="https://github.com/tikv/client-java/actions/workflows/ci.yml">CI</a>.</p>
+<p>At this time, RawKV has been used in the production environment of some commercial customers in latency sensitive systems. But they only use part of the RawKV APIs (mainly including <code>raw_put</code>, <code>raw_get</code>, <code>raw_compare_and_swap</code>, and <code>raw_batch_put</code>).</p>
+<h2 id="txnkv"><a class="header" href="#txnkv">TxnKV</a></h2>
+<p>All TxnKV APIs are covered by <a href="https://github.com/tikv/client-java/actions/workflows/ci.yml">CI</a>.</p>
+<p>In addition, TxnKV has been used in the <a href="https://docs.pingcap.com/tidb/stable/tispark-overview">TiSpark</a> and <a href="https://github.com/tidb-incubator/TiBigData">TiBigData</a> project to integrate data from TiDB to Big Data ecosystem. TiSpark and TiBigData are used in the production system of some commercial customers and internet companies.</p>
+<p>Similar to RawKV, only part of APIs are used in this scenario (mainly including <code>prewrite/commit</code> and <code>coprocessor</code>). And this use case doesn't care about latency but throughput and reliability.</p>
+<h2 id="tidb-cloud"><a class="header" href="#tidb-cloud">TiDB Cloud</a></h2>
+<p>Directly using TiKV is not possible on TiDB Cloud due to the fact that client has to access the whole cluster, which has security issues. And TiKV managed service is not coming soon as it's not contained in <a href="https://docs.pingcap.com/tidbcloud/tidb-cloud-roadmap">roadmap</a> yet.</p>
 <div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="start-with-examples"><a class="header" href="#start-with-examples">Start With Examples</a></h1>
 <p>This section contains examples to demonstrate basic usages of the java client.</p>
 <div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="quick-start"><a class="header" href="#quick-start">Quick Start</a></h1>
@@ -199,7 +210,7 @@ cd java-client-example
 <pre><code class="language-xml">&lt;dependency&gt;
   &lt;groupId&gt;org.tikv&lt;/groupId&gt;
   &lt;artifactId&gt;tikv-client-java&lt;/artifactId&gt;
-  &lt;version&gt;3.1.0&lt;/version&gt;
+  &lt;version&gt;3.3.0&lt;/version&gt;
 &lt;/dependency&gt;
 &lt;dependency&gt;
   &lt;groupId&gt;org.slf4j&lt;/groupId&gt;
@@ -270,7 +281,7 @@ public class App {
 <pre><code>mvn assembly:assembly -DdescriptorId=jar-with-dependencies
 java -cp target/java-client-example-1.0-SNAPSHOT-jar-with-dependencies.jar com.example.App
 </code></pre>
-<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="rawkv"><a class="header" href="#rawkv">RawKV</a></h1>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="rawkv-1"><a class="header" href="#rawkv-1">RawKV</a></h1>
 <p>Below is the basic usages of RawKV. See <a href="https://tikv.github.io/client-java/apidocs/org/tikv/raw/RawKVClient">API document</a> to see a full list of methods available.</p>
 <pre><code class="language-java">import java.util.ArrayList;
 import java.util.List;
@@ -282,7 +293,7 @@ import org.tikv.raw.RawKVClient;
 import org.tikv.shade.com.google.protobuf.ByteString;
 
 public class Main {
-  public static void main() {
+  public static void main(String[] args) throws Exception {
     // You MUST create a raw configuration if you are using RawKVClient.
     TiConfiguration conf = TiConfiguration.createRawDefault(&quot;127.0.0.1:2379&quot;);
     TiSession session = TiSession.create(conf);
@@ -316,7 +327,44 @@ public class Main {
   }
 }
 </code></pre>
-<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="txnkv"><a class="header" href="#txnkv">TxnKV</a></h1>
+<h2 id="api-v2"><a class="header" href="#api-v2">API V2</a></h2>
+<p>With TiKV version &gt;= 6.1.0, we release a new feature called &quot;TiKV API V2&quot; which provides a new raw key-value storage format allowing the coexistence of RawKV and TxnKV. Please refer to <a href="https://docs.pingcap.com/tidb/stable/release-6.1.0#ease-of-use">v6.10 release notes</a> for detail.</p>
+<p>To enable the API V2 mode, users need to specify the API version of the client.</p>
+<pre><code class="language-java">// import ...
+import org.tikv.common.TiConfiguration.ApiVersion;
+
+public class Main {
+  public static void main(String[] args) throws Exception {
+    TiConfiguration conf = TiConfiguration.createRawDefault(&quot;127.0.0.1:2379&quot;);
+    conf.setApiVersion(ApiVersion.V2);
+    try(TiSession session = TiSession.create(conf)) {
+      try(RawKVClient client = session.createRawClient()) {
+        // The client will read and write date in the format of API V2, which is
+        // transparent to the users.
+        client.put(ByteString.copyFromUtf8(&quot;hello&quot;), ByteString.copyFromUtf8(&quot;world&quot;));
+        // other client operations.
+      }
+    }
+  }
+}
+</code></pre>
+<h3 id="compatibility"><a class="header" href="#compatibility">Compatibility</a></h3>
+<p>The V2 Client should not access the cluster other than V2, this requires users to <a href="https://docs.pingcap.com/tidb/stable/tikv-configuration-file#api-version-new-in-v610">enable the API V2</a> for the cluster:</p>
+<pre><code class="language-toml">[storage]
+# The V2 cluster must enable ttl for RawKV explicitly
+enable-ttl = true
+api-version = 2
+</code></pre>
+<p>If V2 client accesses a V1 cluster or V1 cluster accesses a V2 cluster, the requests will be denied by the cluster. You can check the compatibility via the following matrix.</p>
+<table><thead><tr><th></th><th>V1 Server</th><th>V1TTL Server</th><th>V2 Server</th></tr></thead><tbody>
+<tr><td>V1 RawClient</td><td>Raw</td><td>Raw</td><td>Error</td></tr>
+<tr><td>V1 RawClient with TTL</td><td>Error</td><td>Raw</td><td>Error</td></tr>
+<tr><td>V1 TxnClient</td><td>Txn</td><td>Error</td><td>Error</td></tr>
+<tr><td>V1 TiDB</td><td>TiDB Data</td><td>Error</td><td>TiDB Data</td></tr>
+<tr><td>V2 RawClient</td><td>Error</td><td>Error</td><td>Raw</td></tr>
+<tr><td>V2 TxnClient</td><td>Error</td><td>Error</td><td>Txn</td></tr>
+</tbody></table>
+<div id="chapter_begin" style="break-before: page; page-break-before: always;"></div><h1 id="txnkv-1"><a class="header" href="#txnkv-1">TxnKV</a></h1>
 <p>Below is the basic usages of TxnKV.
 Data should be written into TxnKV using <a href="https://tikv.github.io/client-java/apidocs/org/tikv/txn/TwoPhaseCommitter.html"><code>TwoPhaseCommitter</code></a>, and be read using <a href="https://tikv.github.io/client-java/apidocs/org/tikv/txn/KVClient.html"><code>org.tikv.txn.KVClient</code></a>.</p>
 <pre><code class="language-java">import java.util.Arrays;
@@ -335,7 +383,7 @@ import org.tikv.txn.TwoPhaseCommitter;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        TiConfiguration conf = TiConfiguration.createDefault(&quot;127.0.0.1:2389&quot;);
+        TiConfiguration conf = TiConfiguration.createDefault(&quot;127.0.0.1:2379&quot;);
         try (TiSession session = TiSession.create(conf)) {
             // two-phrase write
             long startTS = session.getTimestamp().getVersion();
@@ -481,6 +529,16 @@ public class App {
 <ul>
 <li>a PKCS#8 private key file in PEM format. e.g. /home/tidb/client-key.pem.</li>
 <li>default: null</li>
+</ul>
+<h4 id="tikvtlsreload_interval"><a class="header" href="#tikvtlsreload_interval">tikv.tls.reload_interval</a></h4>
+<ul>
+<li>The interval in seconds to poll the change of TLS context, if a change is detected, the TLS context will be rebuilded.</li>
+<li>default: <code>&quot;10s&quot;</code>, <code>&quot;0s&quot;</code> means disable TLS context reload.</li>
+</ul>
+<h4 id="tikvconnrecycle_time"><a class="header" href="#tikvconnrecycle_time">tikv.conn.recycle_time</a></h4>
+<ul>
+<li>After a TLS context reloading, the old connections will be forced to shutdown after <code>tikv.conn.recycle_time</code> to prevent channel leak.</li>
+<li>default: <code>&quot;60s&quot;</code>.</li>
 </ul>
 <h4 id="tikvrawkvread_timeout_in_ms"><a class="header" href="#tikvrawkvread_timeout_in_ms">tikv.rawkv.read_timeout_in_ms</a></h4>
 <ul>
