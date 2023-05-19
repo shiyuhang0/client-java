@@ -718,6 +718,14 @@ public class RegionStoreClient extends AbstractRegionStoreClient {
       backOffer.doBackOff(
           BackOffFunction.BackOffFuncType.BoRegionMiss, new GrpcException(regionError.toString()));
       logger.warn("Re-splitting region task due to region error:" + regionError.getMessage());
+      // invalid region
+      if (regionError.hasRegionNotFound() || regionError.hasEpochNotMatch()) {
+        logger.info(
+            "invalidateRange when Re-splitting region task because of region not find or epoch not match.");
+        this.regionManager.invalidateRegion(region);
+      } else {
+        logger.info("not invalidateRange when Re-splitting region task");
+      }
       // Split ranges
       return RangeSplitter.newSplitter(this.regionManager).splitRangeByRegion(ranges, storeType);
     }

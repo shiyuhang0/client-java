@@ -237,6 +237,8 @@ public class RegionErrorHandler<RespT> implements ErrorHandler<RespT> {
       }
     }
 
+    logger.info("region epoch not match needInvalidateOld's value is " + needInvalidateOld);
+
     if (needInvalidateOld) {
       notifyRegionCacheInvalidate(recv.getRegion());
       this.regionManager.onRegionStale(recv.getRegion());
